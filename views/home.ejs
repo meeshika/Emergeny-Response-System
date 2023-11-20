@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="toTop" onclick="toTop()"></div> -->
+    <button id="toTop" onclick="scrollToTop()"></button>
+        <div class="welcome-section">
+        <div class="main-nav">
+            <img class="site-logo" src="img/sitelogo.png" alt="Softy Pinko"/>
+            <!-- <span class="nav-items"> -->
+            <a href="#welcome" class="active">Home</a>
+            <a href="#About" id="sA" onclick="scrollToAbout()">About</a>
+            <a href="#Features" id="sF" onclick="scrollToFeatures()">Features</a>
+            <a href="#Contact" id="sC" onclick="scrollToContact()">Contact</a>
+            <a href="#Dashboard">Dashboard</a>
+            <!-- </span> -->
+            
+        </div>
+        <div class="main-header">
+            <h3>START YOUR JOURNEY WITH US AT</h3>
+            <strong style="font-size:100px;">HOSTILIFY</strong>
+            <br>
+            <!-- <button class="button-17"><a href="http://localhost:3001/login">LOGIN/SIGNUP</a></button> -->
+            <!-- <button class="button-17" href="http://localhost:3001/login">LOGIN/SIGNUP</button> -->
+            <a href="http://localhost:3001/login" class="button-17">LOGIN/SIGNUP</a>
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="container-about">
+            <h1>About Us</h1>
+            <p>We at <strong>Hostilify</strong> aim to provide you with the best hostel services with just a few clicks.Hostilify eases the hassle of registering your complaints ranging from electrical,plumbing,room-cleaning and other related complaints.And we're working really hard to cater to all the needs of the student to ensure their stay is as comfortable as possible.</p>
+
+            <img src="img/circle-dec.png" alt="">
+        </div>
+    </div>
+    <div class="services-section">
+        <div class="container-serv">
+            <h1>What do we offer?</h1>
+            <div class="serv">
+                <div class="serv-opt"><img src="img/left-image.png" alt=""><h5>Secured Login</h5><p>Hassle free login/signup</p></div>
+                <div class="serv-opt"><img src="img/left-image.png" alt=""><h5>Complaint Lock-In</h5><p>Easy registeration of the hostel complaints</p></div>
+                <div class="serv-opt"><img src="img/left-image.png" alt=""><h5>Dedicated Progress</h5><p>Get the realtime progress of your registered complaint</p></div>
+                <div class="serv-opt"><img src="img/left-image.png" alt=""><h5>Organized Record</h5><p>Well organized database is maintained of your complaints</p></div>
+                <div class="serv-opt"><img src="img/left-image.png" alt=""><h5>Feedback</h5><p>Give us your regular so that we can improve!</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h1>Get in touch</h1>
+        <p>Do get in touch with us for our daily updates and new features to smoothen your experiance.</p>
+
+        <form action="/connect" method = "POST">
+            <input type="email" placeholder="Email" name="email" />
+            <button type="submit">Join Us</button>
+        </form>
+    </div>
+    <footer>
+
+        <!-- <center> -->
+            <div class="icons">
+                <a href=""><img src="/img/facebook.png" alt=""></a>
+                <a href=""><img src="/img/insta.jpg" alt=""></a>
+                <a href=""><img src="/img/twitter.png" alt=""></a>
+                <a href=""><img src="/img/pintrest.png" alt=""></a>
+            </div>
+            
+        <!-- </center> -->
+        <center style="color: white;">
+            Made with ❤️ do support!
+        </center>
+        
+    </footer>
+<script src="js/home.js"></script>
+
+</body>
+</html>

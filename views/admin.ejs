@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+	<div class="sidenav">
+		<div class="user-acc">
+			<img src="img/sitelogo.png" alt="">
+			<h3>Hello <%=username%></h3>
+      <h4 style="color: grey;">Hostel <%=complaints[0].hostel.toUpperCase()%></h4>
+		</div>
+		<div class="nav-options">
+			<div class="nav-hov">
+				<a href="http://localhost:3001/"><img src="img/home.png" alt="">
+					<span id="text" href="#">Home</span>
+				</a>
+			</div>
+			<div class="nav-hov">
+				<a href=""><img src="img/dashboard.png" alt="">
+					<span id="text" href="#">Dashboard</span>
+				</a>
+				
+			</div>
+			<div class="nav-hov">
+				<a href=""><img src="img/contact.png" alt="">
+					<span id="text" href="#">Contact</span>
+				</a>
+				
+			</div>
+			<div class="nav-hov">
+				<a href="http://localhost:3001/login">
+					<img src="/img/logout.png" alt="">
+					<span id="text" href="#">Logout</span>
+				</a>
+				
+			</div>
+		</div>
+		
+	  </div>
+	<div class="main">
+		<section class="services">
+			<!--heading---------------->
+			<!-- <div class="s-heading">
+			<h1>Ser<font color="rgba(189, 155, 195, 0.342)">vic</font>es</h1>
+			</div> -->
+			<!--services-box-container------------------->
+            <div class="s-heading">
+                <h2>Admin Dashboard</h2>
+            </div>
+            
+			<div class="s-box-container">
+			<!--service-box-1---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+
+                <img src="img/done.webp" alt="">
+
+                <p>Handled 
+                    <br>
+                    <!-- <b>10</b> -->
+                    <b><%=ch%></b>
+                    <br>
+                Complaints</p>
+
+			</div>
+			<!--service-box-1---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+			
+            <img src="img/pending.png" alt="">
+
+            <p>Pending 
+                <br>
+                <!-- <b>10</b> -->
+                <b><%=cp%></b>
+                <br>
+            Complaints</p>
+			</div>
+				<!--service-box-3---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+			
+            <img src="img/total.png" alt="">
+
+            <p>Total 
+                <br>
+                <!-- <b>10</b> -->
+                <b><%=ct%></b>
+                <br>
+            Registered</p>
+			</div>
+			
+			</section>
+
+
+
+
+			<section>
+				<div class="progress">
+					<!-- <div class="s-heading"> -->
+                    <h1>Progress Trackers</h1>
+                    <p>Get the realtime status of the progress bar representing your completed and pending complaints.</p>
+					<!-- </div> -->
+					<div class="container">
+						
+						<div class="circular-progress cp1">
+							<div class="value-container vc1"></div>
+						</div>
+						<div class="circular-progress cp2">
+							<div class="value-container vc2"></div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			
+<section class="table-comp">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>C.No</th>
+          <th>Room Number</th>
+          <!-- <th>Room-Number</th> -->
+          <th>Complaint Type</th>
+          <th>Slot Booked</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <% for(let i = 0; i < complaints.length; i++) { %>
+          <tr>
+            <td class="cf1"><%= i+1 %></td>
+            <td ><%= complaints[i].room %></td>
+            <td class="cf1"><%= complaints[i].type %></td>
+            <td><%= complaints[i].slot %></td>
+            <td><%= complaints[i].date.getDate()%>-<%=complaints[i].date.getMonth()%>-<%= complaints[i].date.getFullYear()%></td>
+            <td><button class="status-btn" id="st-btn1" onclick="myfunction(1)" ><%= complaints[i].status %></button></td>
+          </tr>
+        <% } %>
+        <!-- <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>O-342</td>
+            <td><b>Cleaning</b></td>
+            <td>25 Nov 2022</td>
+            <td>5-6</td>
+            <td><button class="status-btn" id="st-btn1" onclick="myfunction(1)" >Pending</button></td>
+        </tr> -->
+        <!-- <tr>
+            <td>2</td>
+            <td>Elohn</td>
+            <td>B-452</td>
+            <td><b>Cleaning</b></td>
+            <td>25 Nov 2022</td>
+            <td>5-6</td>
+            <td><button class="status-btn" id="st-btn2" onclick="myfunction(2)">Pending</button></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</section>
+<footer>
+
+	<center>
+		<a href="" class="icn"><img src="/img/facebook.png" alt=""></a>
+		<a href=""class="icn"><img src="/img/insta.jpg" alt=""></a>
+		<a href=""class="icn"><img src="/img/twitter.png" alt=""></a>
+		<a href=""class="icn"><img src="/img/pintrest.png" alt=""></a>
+	</center>
+	<center style="color: white;">
+		Made with ❤️ do support!
+	</center>
+	
+</footer>
+</div>
+<script src="js/admin.js"></script>
+</body>
+</html> 

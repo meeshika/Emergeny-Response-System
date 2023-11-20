@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<div class="sidenav">
+		<div class="user-acc">
+			<img src="img/sitelogo.png" alt="">
+			<h3>Hello <%=username%></h3>
+		</div>
+		<div class="nav-options">
+			<div class="nav-hov">
+				<a href="http://localhost:3001/"><img src="img/home.png" alt="">
+					<span id="text" href="#">Home</span>
+				</a>
+			</div>
+			<div class="nav-hov">
+				<a href=""><img src="img/dashboard.png" alt="">
+					<span id="text" href="#">Dashboard</span>
+				</a>
+				
+			</div>
+			<div class="nav-hov">
+				<a href=""><img src="img/contact.png" alt="">
+					<span id="text" href="#">Contact</span>
+				</a>
+				
+			</div>
+			<div class="nav-hov">
+				<a href="http://localhost:3001/login">
+					<img src="/img/logout.png" alt="">
+					<span id="text" href="#">Logout</span>
+				</a>
+				
+			</div>
+		</div>
+		
+	  </div>
+	<div class="main" id="main-bd">
+		<section class="services">
+			<!--heading---------------->
+			<div class="s-heading">
+			<h1>Our Services</h1>
+			<p>We provide you with a series of quality services which caters all your needs.<br>Register your complaints now.</p>
+			</div>
+			<!--services-box-container------------------->
+			<div class="s-box-container">
+			<!--service-box-1---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+			<!--img---------->
+			<img alt="1" src="img/electrician.png" />
+			<!--servies-name---------->
+			<h1>Electrician</h1>
+			<!--details------>
+				<p>Tap in to register electrical problems in your room</p>
+			<!--btn---------->
+			<!-- <a class="s-btn" onclick="openForm()" >Register</a> -->
+			</div>
+				<!--service-box-1---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+			<!--img---------->
+			<img alt="2" src="img/plumbing.png" />
+			<!--servies-name---------->
+			<h1>Plumbing</h1>
+			<!--details------>
+				<p>Any leakage,discontinuity in water supply.Dont worry!</p>
+			<!--btn---------->
+			<!-- <a class="s-btn" onclick="openForm()">Register</a> -->
+			</div>
+				<!--service-box-3---------------->	
+			<div class="s-box">
+			<!--top-bar-------->
+			<div class="bar"></div>
+			<!--img---------->
+			<img alt="3" src="img/room cleaning.jpg" />
+			<!--servies-name---------->
+			<h1>Cleaning</h1>
+			<!--details------>
+				<p>Get your room super-cleaned with just one click</p>
+			<!--btn---------->
+			<!-- <a class="s-btn" onclick="openForm()">Register</a> -->
+			</div>
+			<div class="s-box">
+				<!--top-bar-------->
+				<div class="bar"></div>
+				<!--img---------->
+				<img alt="1" src="img/miscellaneous.png" />
+				<!--servies-name---------->
+				<h1>Miscellenous</h1>
+				<!--details------>
+					<p>Tap in to register any other miscellaneous problems!</p>
+				<!--btn---------->
+				<!-- <a class="s-btn" onclick="openForm()">Register</a> -->
+				</div>
+			</div>
+			<a class="s-btn" onclick="openForm()">Register</a>
+			</section>
+
+
+
+			<!-- for pop-form -->
+			<div class="form-popup" id="myForm">
+				<img src="img/cross.png" alt="" onclick="closeForm()">
+				<div class="brand-logo"></div>
+				<div class="brand-title">COMPLAINT-FORM</div>
+				<div class="inputs">
+					<form action="" method="post">
+						<input type="number" placeholder="Enter room-number" name="room" required>
+						<!-- <input type="text" placeholder="enter type" name="type" required> -->
+						<input type="tel" placeholder="Enter mobile number" name="conatct" required maxlength="10" minlength="10" minlength="10" >
+						<select name="type" id="type" required>
+							<option value="none" selected disabled hidden>Select complaint type</option>
+							<option value="electrical">Electrical</option>
+							<option value="plumbing">Plumbing</option>
+							<option value="room-cleaning">Room Cleaning</option>
+							<option value="miscellaneous">Miscellenous</option>
+						</select>
+						<select name="slot" id="time" required>
+						  <option value="none" selected disabled hidden>Select time slot</option>
+						  <option value="10-12">10:00-12:00 AM</option>
+						  <option value="1-2">1:00-2:00 PM</option>
+						  <option value="2-4">2:00-4:00 PM</option>
+						  <option value="4-6">4:00-6:00 PM</option>
+						  <option value="6-8">6:00-8:00 PM</option>
+						</select>
+						<textarea name="desc" id="desc" cols="62" rows="3" placeholder="Enter any additional description of the issue faced(eg tap-leak,switch not working etc)"></textarea>
+						<button type="submit">REGISTER COMPLAINT</button>
+					</form>
+				  
+				  <!-- <button type="submit" onclick="closeForm()">CLOSE</button> -->
+				</div>
+			  </div>
+
+			  <!-- <hr> -->
+
+			<section>
+				<div class="progress">
+					<!-- <div class="s-heading"> -->
+						<h1>Progress Trackers</h1>
+						<p>Get the realtime status of the progress bar representing your completed and pending complaints.</p>
+					<!-- </div> -->
+					<div class="container">
+						
+						<div class="circular-progress cp1">
+							<div class="value-container vc1"></div>
+						</div>
+						<div class="circular-progress cp2">
+							<div class="value-container vc2"></div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			
+<section class="table-comp">
+	<h1>Complaint Status</h1>
+	<p>Get complete track of your logged in complaints in an organized fashion.</p>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>C.No</th> 
+          <th>Complaint Type</th>
+          <th>Date</th>
+          <th>Slot Booked</th> 
+          <th>Status</th> 
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+		<% for(let i = 0; i < complaints.length; i++) { %>
+			<tr>
+				<td><%= i+1 %></td>
+				<td class="cf1"><%= complaints[i].type %></td>
+				<td><%= complaints[i].date.getDate()%>-<%=complaints[i].date.getMonth()%>-<%= complaints[i].date.getFullYear()%></td>
+				<td class="cf1"><%= complaints[i].slot %></td>
+				<td><%= complaints[i].status %></td>
+			</tr>
+		<% } %>
+      </tbody>
+    </table>
+  </div>
+  <!-- <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Cleaning</td>
+          <td>25 Nov 2022</td>
+          <td>5-6</td>
+          <td><img src="img/done.webp" alt="">Complete</td>
+        </tr>
+        <tr>
+			<td>2</td>
+			<td>Plumbing</td>
+			<td>27 Nov 2022</td>
+			<td>1-2</td>
+			<td><img src="img/pending.png" alt=""> Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+</section>
+		
+<footer>
+
+	<center>
+		<a href=""><img src="/img/facebook.png" alt=""></a>
+		<a href=""><img src="/img/insta.jpg" alt=""></a>
+		<a href=""><img src="/img/twitter.png" alt=""></a>
+		<a href=""><img src="/img/pintrest.png" alt=""></a>
+	</center>
+	<center style="color: white;">
+		Made with ❤️ do support!
+	</center>
+	
+</footer>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html> 
